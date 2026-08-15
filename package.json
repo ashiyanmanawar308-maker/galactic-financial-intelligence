@@ -1,0 +1,24 @@
+{
+  "name": "finic",
+  "version": "1.0.0",
+  "description": "Galactic Financial Intelligence",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "finance",
+    "stocks",
+    "investment",
+    "financial-analysis"
+  ],
+  "author": "Ashiyan",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
