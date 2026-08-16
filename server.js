@@ -175,37 +175,17 @@ app.get("/api/history", async (req, res) => {
 // SERVER START
 // ======================================
 
-app.listen(PORT, () => {
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`🚀 GALACTIC running on port ${PORT}`);
+        console.log(
+            `🔑 Twelve Data: ${
+                TWELVE_DATA_API_KEY
+                    ? "READY ✅"
+                    : "MISSING ❌"
+            }`
+        );
+    });
+}
 
-    console.log("");
-    console.log(
-        "======================================"
-    );
-
-    console.log("🚀 GALACTIC BACKEND");
-
-    console.log(
-        "======================================"
-    );
-
-    console.log(
-        `🔑 Twelve Data: ${
-            TWELVE_DATA_API_KEY
-                ? "READY ✅"
-                : "MISSING ❌"
-        }`
-    );
-
-    console.log(
-        "======================================"
-    );
-
-    console.log(
-        `🌐 Server running on port ${PORT}`
-    );
-
-    console.log("");
-    console.log(
-        "🚀 GALACTIC is ready!"
-    );
-});
+module.exports = app;
