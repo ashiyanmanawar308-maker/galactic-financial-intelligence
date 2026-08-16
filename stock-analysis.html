@@ -19,6 +19,7 @@
       rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
 <style>
@@ -4903,7 +4904,13 @@ console.log(
 console.log(
     "🔗 AI endpoint: http://localhost:3000/api/ai/chat"
 );
+const SUPABASE_URL = "https://kqebiebsxblqxpudhavi.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_dqhwP6hcF9iLhEwKS20hiA_r4aH7OZ3";
 
+const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+);
 </script>
 
 </body>
